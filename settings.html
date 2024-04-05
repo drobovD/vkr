@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="/index.html">Главная страница</a>
+    <button class="change_password">Сменить пароль</button>
+    <div class="settings_container hidden">
+        <input class="current_password" type="password" placeholder="Введите текущий пароль">
+        <input class="new_password" type="password" placeholder="Введите новый пароль">
+        <input class="repeat_new_password" type="password" placeholder="Еще раз введите новый пароль">
+        <div class="error_container"></div>
+        <div>
+            <button class="ok">Ок</button>
+            <button class="cancel">Отмена</button>
+        </div>
+    </div>
+    <div class="message_container hidden">Пароль успешно изменен</div>
+    <script>
+        const changePasswordButton = document.querySelector(".change_password")
+        const container = document.querySelector(".settings_container")
+        const currentPasswordInput = container.querySelector(".current_password")
+        const newPasswordInput = container.querySelector(".new_password")
+        const repeatNewPasswordInput = container.querySelector(".repeat_new_password")
+        const errorContainer = container.querySelector(".error_container")
+        const okButton = container.querySelector(".ok")
+        const cancelButton = container.querySelector(".cancel")
+        const messageContainer = document.querySelector(".message_container")
+
+        changePasswordButton.onclick = function() {
+            container.classList.remove("hidden")
+            changePasswordButton.classList.add("hidden")
+        }
+
+        container.oninput = function() {
+            errorContainer.textContent = ""
+        }
+
+        okButton.onclick = async function() {
+            if(newPasswordInput.value !== repeatNewPasswordInput.value) {
+                return
+            }
+            const data = {
+                currentPassword: currentPasswordInput.value,
+                newPassword: newPasswordInput.value,
+            }
+            currentPasswordInput.value = ""
+            newPasswordInput.value = ""
+            repeatNewPasswordInput.value = ""
+            const response = await fetch("/change_password", {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+            const result = await response.json()
+            if (result.success) {
+                container.classList.add("hidden")
+                changePasswordButton.classList.remove("hidden")
+                messageContainer.classList.remove("hidden")
+                setTimeout(function() {
+                    messageContainer.textContent = ""
+                    messageContainer.classList.add("hidden")
+                }, 1500)
+            } else {
+                errorContainer.textContent = result.msg
+                setTimeout(function() {
+                    errorContainer.textContent = ""
+                    errorContainer.classList.add("hidden")
+                }, 1500)
+            }
+        }
+
+        cancelButton.onclick = function() {
+            container.classList.add("hidden")
+            changePasswordButton.classList.remove("hidden")
+        }
+    </script>
+</body>
+</html>

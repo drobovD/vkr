@@ -1,0 +1,149 @@
+[
+    {
+        "user_id": "27562858",
+        "record_id": 4,
+        "record_type": "link",
+        "title": "Статья4",
+        "content": "http://example.com/api",
+        "img": "fsjkak1276bcjs.jpg",
+        "tags": [
+            "Ссылка",
+            "Пример",
+            "API",
+            "qw",
+            "qww",
+            "qwe"
+        ],
+        "favorites": true,
+        "recycle_bin": false
+    },
+    {
+        "user_id": "63184062",
+        "record_id": 6,
+        "record_type": "snippet",
+        "title": "Статья6",
+        "content": "Будет новый день",
+        "img": "fksjmk26bcjs.jpg",
+        "tags": [
+            "Навигация",
+            "ресурсы",
+            "API",
+            "ti",
+            "rere",
+            "iuiu",
+            "sad",
+            "trew",
+            "kuy",
+            "qwqww",
+            "dfdf"
+        ],
+        "favorites": false,
+        "recycle_bin": false
+    },
+    {
+        "user_id": "27562858",
+        "record_id": 8,
+        "record_type": "snippet",
+        "title": "Статья8",
+        "content": "Новый день",
+        "img": "fksjmk26bcjs.jpg",
+        "tags": [
+            "ресурсы",
+            "API",
+            "ti",
+            "rere",
+            "iuiu",
+            "sad",
+            "trew",
+            "kuy",
+            "qwqww",
+            "dfdf"
+        ],
+        "favorites": true,
+        "recycle_bin": false
+    },
+    {
+        "user_id": "27562858",
+        "record_id": 9,
+        "record_type": "snippet",
+        "title": "Статья9",
+        "content": "День",
+        "img": "fksjmk26bcjs.jpg",
+        "tags": [
+            "API",
+            "ti",
+            "rere",
+            "iuiu",
+            "sad",
+            "trew",
+            "kuy",
+            "qwqww",
+            "dfdf"
+        ],
+        "favorites": true,
+        "recycle_bin": false
+    },
+    {
+        "user_id": "27562858",
+        "record_id": 10,
+        "record_type": "snippet",
+        "title": "Статья10",
+        "content": "Статья10",
+        "img": "fksjmk26bcjs.jpg",
+        "tags": [
+            "API",
+            "ti",
+            "rere",
+            "iuiu",
+            "sad",
+            "trew",
+            "kuy",
+            "qwqww",
+            "dfdf"
+        ],
+        "favorites": true,
+        "recycle_bin": false
+    },
+    {
+        "user_id": "27562858",
+        "record_id": 11,
+        "record_type": "snippet",
+        "title": "Статья11",
+        "content": "Статья11",
+        "img": "fksjmk26bcjs.jpg",
+        "tags": [
+            "API",
+            "ti",
+            "rere",
+            "iuiu",
+            "sad",
+            "trew",
+            "kuy",
+            "qwqww",
+            "dfdf"
+        ],
+        "favorites": false,
+        "recycle_bin": false
+    },
+    {
+        "user_id": "27562858",
+        "record_id": 12,
+        "record_type": "snippet",
+        "title": "Статья12",
+        "content": "Статья12",
+        "img": "fksjmk26bcjs.jpg",
+        "tags": [
+            "API",
+            "ti",
+            "rere",
+            "iuiu",
+            "sad",
+            "trew",
+            "kuy",
+            "qwqww",
+            "dfdf"
+        ],
+        "favorites": false,
+        "recycle_bin": false
+    }
+]

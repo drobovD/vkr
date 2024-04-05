@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="/settings.html">Настройки</a>
+    <button class="logout">Выйти</button>
+    <div class="container">
+        <ul class="sidebar_menu">
+            <li class="records active_item">Мои записи</li>
+            <li class="tags">Мои теги</li>
+            <li class="articles">Мои статьи</li>
+            <li class="videos">Мои видео</li>
+            <li class="favorites">Избранное</li>
+            <li class="recycle_bin">Корзина</li>
+        </ul>
+        <div class="content"></div>
+    </div>
+    <template class="pagination_template">
+        <div class="pagination">
+            <button class="first">Первая</button>
+            <button class="previous">Предыдущая</button>
+            <div class="page">
+                <span class="current_page">1</span> из <span class="pages_count"></span>
+            </div>
+            <button class="next">Следующая</button>
+            <button class="last">Последняя</button>
+        </div>
+    </template>
+    <template class="tags_wrapper_template">
+        <div class="tags_wrapper">
+            <div class="search_box">
+                <input type="text" placeholder="Введите тег">
+                <button class="search">Найти</button>
+            </div>
+            <div class="tags_container"></div>
+        </div>
+    </template>
+    <template class="record_controls_template">
+        <div class="record_controls">
+            <button class="add_to_favorites" data-msg="Запись успешно добавлена в избранное">Добавить в избранное</button>
+            <button class="move_to_recycle_bin" data-msg="Запись успешно добавлена в корзину">Переместить в корзину</button>
+            <button class="add_tag" data-msg="Тег успешно добавлен к записи">Добавить тег</button>
+            <button class="share_record" data-msg="Ссылка успешно скопирована">Поделиться</button>
+            <button class="delete_record" data-msg="Запись успешно удалена">Удалить</button>
+            <button class="edit_title" data-msg="Название записи успешно отредактировано">Редактировать название</button>
+            <button class="attach_file" data-msg="Файл(ы) успешно прикреплен(ы)">Прикрепить файл</button>
+        </div>
+    </template>
+    <template class="recycle_bin_controls_template">
+        <div class="recycle_bin_controls">
+            <button class="delete_record" data-msg="Запись успешно удалена">Удалить запись</button>
+            <button class="restore_from_recycle_bin" data-msg="Запись успешно восстановлена">Восстановить запись</button>
+        </div>
+    </template>
+    <template class="editable_template">
+        <div>
+            <input type="text">
+            <button>Ок</button>
+            <button>Отмена</button>
+        </div>
+    </template>
+    <template class="non-editable_template">
+        <div>
+            <button>Ок</button>
+            <button>Отмена</button>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>

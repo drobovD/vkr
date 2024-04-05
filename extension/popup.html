@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container hidden">
+        <h1 class="username">Привет, <span>User</span></h1>
+        <div class="record-type">
+            <label>
+                <input type="radio" name="record-type" value="article" class="article_radio" disabled checked>
+                Статья
+            </label>
+            <label>
+                <input type="radio" name="record-type" value="video" class="video_radio" disabled>
+                Видео
+            </label>
+        </div>
+        <input type="text" class="title" placeholder="Введите заголовок">
+        <input type="text" class="url" placeholder="Введите URL" disabled>
+        <textarea rows="5" class="content" disabled></textarea>
+        <!-- <input type="text" class="tags" placeholder="Введите теги"> -->
+        <select class="tags" hidden multiple></select>
+        <textarea rows="5" class="comment" placeholder="Введите коментарий"></textarea>
+        <div class="error-message"></div>
+        <div class=controls>
+            <button class="ok-button">Ок</button>
+            <button class="cancel-button">Отмена</button>
+        </div>
+    </div>
+    <div class="authentication-container">Подождите...</div>
+    <div class="information-container hidden">
+        Чтобы начать пользоваться данным расширением,<br>авторизуйтесь на сайте <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>
+    </div>
+    <script src="popup.js"></script>
+</body>

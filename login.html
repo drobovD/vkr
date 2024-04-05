@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <style>
+        .login_form > * {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_form">
+        <input type="text" placeholder="Email" class="email">
+        <input type="text" placeholder="Пароль" class="password">
+        <button class="login_button">Войти в личный кабинет</button>
+        <a href="signup.html">Зарегистрироваться</a>
+        <div class="error_container"></div>
+    </div>
+    <script>
+        const emailInput = document.querySelector(".email")
+        const passwordInput = document.querySelector(".password")
+        const loginButton = document.querySelector(".login_button")
+        const errorContainer = document.querySelector(".error_container")
+
+        loginButton.onclick = async function() {
+            const user = {
+                email: emailInput.value,
+                password: passwordInput.value
+            }
+            const res = await fetch("/login", {
+                method: "POST",
+                body: JSON.stringify(user)
+            });
+            const result = await res.json();
+            if (result.success) {
+                location.href = "/index.html"
+            } else {
+                errorContainer.textContent = result.msg
+            }
+        }
+    </script>
+</body>
+</html>

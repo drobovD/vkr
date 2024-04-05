@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "Linkquotage",
+    "description": "This extension allows to store and manage links while browsing web sites",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon16.png"
+    },
+    "permissions": [
+        "tabs",
+        "contextMenus"
+    ],
+    "host_permissions": [
+        "http://localhost/",
+        "https://www.google.com/",
+        "https://stackoverflow.com/"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://*/*",
+                "http://*/*"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": "Alt+R"
+        },
+        "create_article": {
+            "suggested_key": "Alt+R",
+            "description": "Create a record of type 'article'"
+        },
+        "create_video": {
+            "suggested_key": "Alt+R",
+            "description": "Create a record of type 'video'"
+        }
+    },
+    "icons": {
+        "16": "icon16.png"
+    }
+}

@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+}
+
+.sidebar_menu {
+    width: fit-content;
+}
+
+.sidebar_menu li {
+    display: block;
+}
+
+.active_item {
+    background-color: gray;
+}
+
+.get_summary {
+    display: block;
+}
+
+.settings_container > * {
+    display: block;
+}
+
+.settings_container input {
+    width: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+.pagination .page {
+    display: inline-block;
+}
